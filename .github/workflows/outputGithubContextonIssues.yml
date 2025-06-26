@@ -1,11 +1,11 @@
 name: Output Github Context on Issues creation
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 jobs:
   outputContext:
     runs-on: ubuntu-latest
     steps:
       - name: Output GitHub Context
-        run: echo "Hello"
+        run: echo "Entire Github Context ${{ toJson(github) }}"
