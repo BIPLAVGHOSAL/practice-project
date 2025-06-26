@@ -1,0 +1,11 @@
+name: Output Github Context on Issues creation
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  outputContext:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output GitHub Context
+        run: echo "Hello"
