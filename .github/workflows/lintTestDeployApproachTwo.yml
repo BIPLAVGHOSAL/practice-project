@@ -1,4 +1,4 @@
-name: Lint Test Deploy Approach One
+name: Lint Test Deploy Approach Two
 on: workflow_dispatch
 
 jobs:
