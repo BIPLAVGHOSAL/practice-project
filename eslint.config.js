@@ -5,7 +5,10 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   {
-    files: ['**/*.{js,jsx}'],
+    ignores: ['node_modules/**', 'dist/**', 'build/**', '.vite/**'],
+  },
+  {
+    files: ['src/**/*.{js,jsx}', '*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
@@ -43,7 +46,7 @@ export default [
     },
   },
   {
-    files: ['**/*.test.{js,jsx}'],
+    files: ['src/**/*.test.{js,jsx}', 'src/**/*.spec.{js,jsx}'],
     languageOptions: {
       globals: {
         describe: 'readonly',

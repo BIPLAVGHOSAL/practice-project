@@ -1,2 +1,17 @@
 node_modules/
 npm-debug.log
+dist/
+build/
+.vite/
+coverage/
+.eslintcache
+.vscode/
+.DS_Store
+*.log
+*.tmp
+*.swp
+*.bak
+*.orig
+*.cache
+*.pid
+*.seed  
