@@ -35,7 +35,7 @@ jobs:
 
             - name: Run Tests
               run: npm test
-    buildAndDeploy:
+    build:
         runs-on: ubuntu-latest
         needs: [lint, test]
         steps:
@@ -61,5 +61,15 @@ jobs:
                   dist
                   package.json
 
+      deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: Download Build Artifacts
+              uses: actions/download-artifact@v4
+              with:
+                name: build-artifacts
+            - name: Check output
+              run: ls -la
             - name: Deploy Application
               run: echo "Deploying application..."
